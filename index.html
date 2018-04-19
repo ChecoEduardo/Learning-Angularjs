@@ -12,37 +12,36 @@
       <h1>ng-model</h1>
       <hr>
       <p>
-          Su nombre {{nombre}}
+          Su nombre
           <br>
           <input type="text" ng-model="nombre" placeholder="Escribe tu nombre" class="form-control">
       </p>
       <p>
-        Seleccione el pais: {{pais}}
-        <select class="form-control" ng-model="pais">
-          <option value="Costa Rica"> Costa Rica</option>
-          <option value="México"> México</option>
-          <option value="Colombia"> Colombia</option>
-        </select>
-      </p>
-
-      <p>
-         Seleccione las opciones que desse {{opt1}} {{opt2}}
+          Lugar de trabajo
           <br>
-          <label for="opcion1">Opocion1</label>
-          <input type="checkbox" name="opcion1" ng-model="opt1">
-          <label for="opcion2">Opocion2</label>
-          <input type="checkbox" name="opcion2" ng-model="opt2">
+          <input type="text" ng-model="LT" placeholder="Escribe tu lugar de trbajo" class="form-control">
       </p>
+
       <p>
-         Seleccione su genero {{genero}}
+          Salario de dolares
+          <br>
+          <input type="text" ng-model="salario" placeholder="Escribe tu salario" class="form-control">
+      </p>
+
+      <p>
+         nombre: {{nombre | uppercase}}
          <br>
-         <input type="radio" value="M" ng-model="genero"> Masculino
+         Lugar de trabajo: {{LT | lowercase}}
          <br>
-         <input type="radio" value="F" ng-model="genero"> Femenino
+         Salario: {{ salario | currency}}
 
 
 
       </p>
+
+
+
+
 
 
     </div>

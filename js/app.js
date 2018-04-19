@@ -3,19 +3,18 @@ var app= angular.module('UniversodadApp',[]);
 app.controller('profesorCtrl',function($scope){
       $scope.profesor= profesorData;
       $scope.editando={};
-
-
+      $scope.Mostrar=false;
       $scope.EditarProfesor= function (){
-
         angular.copy($scope.profesor, $scope.editando);
+        $scope.Mostrar=true;
       }
-
       $scope.GuardarCmabios=function(){
-
-angular.copy($scope.editando, $scope.profesor);
+        angular.copy($scope.editando, $scope.profesor);
+        $scope.Mostrar=false;
       }
       $scope.CancelarCambios=function(){
          $scope.editando={};
+         $scope.Mostrar=false;
       }
 
 

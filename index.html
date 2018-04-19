@@ -9,31 +9,39 @@
   </head>
   <body>
     <div class="container">
-      <h1>Filtros :: Filters</h1>
-      <h2>en Angularjs</h2>
+      <h1>ng-model</h1>
       <hr>
       <p>
-          Sin filtro de texto: {{"fernando"}}
+          Su nombre {{nombre}}
           <br>
-          Filtro de texto: {{"fernando" | uppercase}}
-          <br>
-          Filtro de texto: {{"ferEnAndo" | lowercase}}
-          <hr>
+          <input type="text" ng-model="nombre" placeholder="Escribe tu nombre" class="form-control">
       </p>
       <p>
-        Sin filtro de texto: {{1487}}
-       <br>
-        Filtro de texto: {{1487  | currency}}
-        <br>
-        Filtro de texto: {{1487  | currency:''}}
-        <hr>
+        Seleccione el pais: {{pais}}
+        <select class="form-control" ng-model="pais">
+          <option value="Costa Rica"> Costa Rica</option>
+          <option value="México"> México</option>
+          <option value="Colombia"> Colombia</option>
+        </select>
       </p>
 
       <p>
-          Sin filtro de numero : {{1569}}
+         Seleccione las opciones que desse {{opt1}} {{opt2}}
           <br>
-          Filtro de numero:{{1569 | number}}
-          <hr>
+          <label for="opcion1">Opocion1</label>
+          <input type="checkbox" name="opcion1" ng-model="opt1">
+          <label for="opcion2">Opocion2</label>
+          <input type="checkbox" name="opcion2" ng-model="opt2">
+      </p>
+      <p>
+         Seleccione su genero {{genero}}
+         <br>
+         <input type="radio" value="M" ng-model="genero"> Masculino
+         <br>
+         <input type="radio" value="F" ng-model="genero"> Femenino
+
+
+
       </p>
 
 

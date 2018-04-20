@@ -23,46 +23,16 @@
   <body>
     <div class="container" ng-controller="listadoCtrl">
 
-      <h1>Filtros</h1>
-      <h4>Para el ng-repeat</h4>
+      <h1>ng-options</h1>
+      <h4>Repeticiones para elementos</h4>
       <hr>
+      Seleccione pais: {{paisSeleccionado}}
+      <select class="form-control" ng-model="paisSeleccionado" ng-options="pais.id as pais.nombre for pais in paises">
+        <option value="">Seleccione un pais</option>
 
-        <div class="row">
-        Busqueda:
-        <br>
-          <input type="text"  ng-model="busqueda.nombre" class="form-control" placeholder="Ingresa tu busqueda">
-
-          <select class="form-control"  ng-model="busqueda.sexo">
-            <br>
-              <option value="">Cualquiera</option>
-              <option value="mujer">Mujer</option>
-              <option value="hombre">Hombre</option>
-
-          </select>
-          <br>
-        </div>
-        <br>
+      </select>
 
 
-
-      <table class="table table-striped">
-        <tr>
-          <th><a class="puntero" ng-click="columna='id'; reverse=!reverse">id</a>  </th>
-          <th>Foto</th>
-          <th><a class="puntero" ng-click="columna='nombre'; reverse=!reverse">Nombre</a>  </th>
-          <th><a class="puntero" ng-click="columna='sexo'; reverse=!reverse">Sexo</a>  </th>
-          <th>Telefono</th>
-          <th>Celular</th>
-        </tr>
-        <tr    ng-repeat="persona in personas | filter:busqueda | orderBy:columna:reverse ">
-          <td>{{persona.id}}</td>
-          <td><img ng-src="img/{{persona.avatar}}" class="avatar img-circle" ></td>
-          <td>{{persona.nombre}}</td>
-          <td>{{persona.sexo}}</td>
-          <td>{{persona.telefono}}</td>
-          <td>{{persona.celular}}</td>
-        </tr>
-      </table>
 
 
 

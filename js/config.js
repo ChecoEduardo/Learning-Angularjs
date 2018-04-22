@@ -14,7 +14,7 @@ app.config( function( $routeProvider ){
         templateUrl: 'parciales/profesores.html',
         controller: 'profesoresCtrl'
     })
-    .when('/alumno/:codigo',{
+    .when('/alumno/:codigo/:nombre/:cell/:adress',{
         templateUrl: 'parciales/alumno.html',
         controller: 'alumnoCtrl'
     })

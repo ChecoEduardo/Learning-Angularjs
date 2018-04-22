@@ -1,1 +1,30 @@
-<h1>Alumnos</h1>
+<h2>
+  Alumnos
+</h2>
+<h2>
+  Listado de Alumnos en el sistema
+
+</h2>
+
+<div class="row">
+  <table class="table table-striped">
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Personalizado</th>
+    </tr>
+    <tr  ng-repeat="alumno in ListadoAlumnos.alumnos | limitTo:posicion | limitTo:-5">
+      <td>{{alumno.id}}</td>
+      <td>{{alumno.nombre}}</td>
+      <td>{{alumno.telefono | telefonos}}</td>
+      <td><a href="#!/alumno">Link</a></td>
+    </tr>
+  </table>
+  <br>
+  <button class="btn btn-primary "  ng-click="Restar()" >Anteriores</button>
+  <button class="btn btn-primary" ng-click="siguientes()">Sigueinte</button>
+
+
+
+</div>
